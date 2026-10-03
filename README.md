@@ -28,7 +28,7 @@ If the language model is removed, the TCGA profiles can still be normalized and 
 
 ## Overview
 
-This project will construct standardized, de-identified **molecular case cards** from open-access somatic-mutation data in the [NCI Genomic Data Commons](https://portal.gdc.cancer.gov/). The Starter and Standard studies will use lung adenocarcinoma cases from TCGA-LUAD.
+This project will construct standardized, de-identified molecular case cards from open-access somatic-mutation data in the [NCI Genomic Data Commons](https://portal.gdc.cancer.gov/). The Starter and Standard studies will use lung adenocarcinoma cases from TCGA-LUAD.
 
 Each case will be presented to the same model under two conditions:
 
@@ -47,13 +47,13 @@ The resulting benchmark may identify narrow tasks for which LLMs could assist re
 
 ### Ground-Truth Form
 
-This project uses a **human-coded gold standard**. CIViC evidence items are manually curated from published cancer literature and reviewed by CIViC editors. Only accepted evidence items and accepted assertions from the dated **October 1, 2026** release will be included.
+This project uses a human-coded gold standard. CIViC evidence items are manually curated from published cancer literature and reviewed by CIViC editors. Only accepted evidence items and accepted assertions from the dated October 1, 2026 release will be included.
 
-A claim missing from CIViC will be labeled **not found in the selected reference**, not automatically false or hallucinated. CIViC is curated but not exhaustive.
+A claim missing from CIViC will be labeled not found in the selected reference, not automatically false or hallucinated. CIViC is curated but not exhaustive.
 
 ### Input Dataset
 
-The input profiles will come from the **TCGA-LUAD** project in NCI Genomic Data Commons Data Release 46.0. The study will use open-access, processed masked somatic mutation MAF files rather than raw sequencing files, protected MAF files, or germline data.
+The input profiles will come from the TCGA-LUAD project in NCI Genomic Data Commons Data Release 46.0. The study will use open-access, processed masked somatic mutation MAF files rather than raw sequencing files, protected MAF files, or germline data.
 
 The fixed 25-case Standard dataset will be generated from unique primary-tumor cases using seed `2026`. To prevent the case cards from all being alike, the sample will contain three prespecified evidence strata:
 
@@ -282,7 +282,7 @@ Determine whether the grounding effect replicates across selected models and can
 
 ### Unit of Analysis
 
-The unit of analysis is a **substantive claim**, not an entire report. Before condition labels are revealed, each claim will be assigned to exactly one category.
+The unit of analysis is a substantive claim, not an entire report. Before condition labels are revealed, each claim will be assigned to exactly one category.
 
 | Category | Operational rule |
 | --- | --- |
@@ -367,7 +367,7 @@ The study will use these accepted-only TSV files from the October 1, 2026 monthl
 
 No nightly or accepted-and-submitted release will be mixed into the reference after the dataset is frozen.
 
-## Suggested Repository Structure
+## Repository Structure
 
 ```text
 .
@@ -377,29 +377,10 @@ No nightly or accepted-and-submitted release will be mixed into the reference af
 │   ├── metadata/
 │   ├── evidence/
 │   │   └── civic-2026-10-01/
-│   ├── processed/
-│   └── raw/                  # Ignored; local GDC downloads only
+│   └── raw/                  # Ignored; downloaded locally
 ├── prompts/
-│   ├── system_prompt.md
-│   ├── case_only_prompt.md
-│   └── evidence_prompt.md
-├── schemas/
-│   ├── case_card.schema.json
-│   └── model_output.schema.json
-├── src/
-│   ├── download_gdc.py
-│   ├── build_case_cards.py
-│   ├── retrieve_civic.py
-│   ├── run_models.py
-│   └── score_outputs.py
-├── results/
-│   ├── raw_outputs/
-│   ├── scored_outputs/
-│   └── figures/
-├── notebooks/
-├── tests/
+│   └── prompts.md
 ├── .gitignore
-├── LICENSE
 └── README.md
 ```
 
