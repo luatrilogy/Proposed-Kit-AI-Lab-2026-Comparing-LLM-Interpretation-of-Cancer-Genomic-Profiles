@@ -1,4 +1,4 @@
-# ONC1: Hand an AI a Tumor Profile. Does It Know What the Evidence Actually Supports?
+# Can an AI a Tumor Profile. Does It Know What the Evidence Actually Supports?
 
 ## Research Question
 
