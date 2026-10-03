@@ -373,11 +373,9 @@ No nightly or accepted-and-submitted release will be mixed into the reference af
 .
 ├── data/
 │   ├── DATA.md
-│   ├── manifests/
-│   ├── metadata/
 │   ├── evidence/
 │   │   └── civic-2026-10-01/
-│   └── raw/                  # Ignored; downloaded locally
+│   └── raw data/                  
 ├── prompts/
 │   └── prompts.md
 ├── .gitignore
