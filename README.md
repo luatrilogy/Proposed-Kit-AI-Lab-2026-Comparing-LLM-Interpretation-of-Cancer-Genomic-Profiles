@@ -18,9 +18,7 @@ Computational oncology / bioinformatics / AI evaluation / precision medicine
 
 ## Property Tested
 
-**Evidence grounding.** In this project, evidence grounding means whether a model's substantive molecular claims are supported by the fixed CIViC reference evidence. The primary independent variable is whether the model receives a matched CIViC evidence packet in addition to the same TCGA case profile.
-
-Faithfulness, abstention, and reproducibility will be reported as secondary measurements, not as separate primary properties.
+**Evidence grounding.** In this project, evidence grounding means whether a model's substantive molecular claims are supported by the fixed CIViC reference evidence. The primary independent variable is whether the model receives a matched CIViC evidence packet in addition to the same TCGA case profile. Faithfulness, abstention, and reproducibility will be reported as secondary measurements.
 
 ## Removal Test
 
