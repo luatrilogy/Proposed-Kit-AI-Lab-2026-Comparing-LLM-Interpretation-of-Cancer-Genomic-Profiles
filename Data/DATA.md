@@ -51,31 +51,6 @@ The project uses only GDC files labeled **open**. Open GDC data may be used for 
 | Experimental Strategy | `WXS` |
 | Workflow Type | `Aliquot Ensemble Somatic Variant Merging and Masking` |
 
-### Files to Preserve in Git
-
-The following small provenance files should be committed after the correctly filtered download is generated:
-
-```text
-data/manifests/gdc_manifest.TCGA-LUAD.masked-maf.txt
-data/metadata/gdc_file_metadata.TCGA-LUAD.masked-maf.tsv
-data/metadata/gdc_sample_sheet.TCGA-LUAD.masked-maf.tsv
-data/metadata/gdc_clinical.TCGA-LUAD.tsv
-data/metadata/gdc_biospecimen.TCGA-LUAD.tsv
-data/processed/selected_cases.tsv
-```
-
-The earlier project-wide manifest containing all TCGA-LUAD file types must not be used as the experiment manifest.
-
-### Local Files Excluded From Git
-
-```text
-data/raw/**/*.maf.gz
-data/raw/**/*.bam
-data/raw/**/*.vcf.gz
-```
-
-Raw MAF downloads are reproducible from the filtered manifest and should remain in ignored local storage.
-
 ## Source 2: CIViC
 
 ### Creator and Purpose
